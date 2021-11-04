@@ -6,6 +6,7 @@
     "dev": "ts-node-dev --respawn src/app.ts"
   },
   "dependencies": {
+    "@types/pg": "^8.6.1",
     "express": "^4.17.1",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",

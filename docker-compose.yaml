@@ -1,0 +1,49 @@
+# # Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+  mydb:
+    container_name: "psql"
+    image: postgres
+    environment:
+      POSTGRES_DB: jorgedb
+      POSTGRES_USER: teresalves
+      POSTGRES_PASSWORD: example
+    ports:
+      - 3300:5432
+    volumes:
+      - ~/dbdata:/var/lib/postgresql/data
+      - ./init-database.sh:/docker-entrypoint-initdb.d/init-database.sh
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+volumes:
+  postgres:
+
+
+# version: "3.7"
+# services:
+#   postgres:
+#     container_name: "psql"
+#     image: postgres
+#     environment:
+#       POSTGRES_DB: postgres
+#       POSTGRES_USER: postgres
+#       POSTGRES_PASS: example
+#     volumes:
+#        - ~/dbdata:/var/lib/postgresql/data
+
+#   api:
+#     image: adminer
+#     restart: always
+#     ports:
+#       - 8080:8080
+#     depends_on:
+#       - postgres
+    
+  

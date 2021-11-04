@@ -1,9 +1,9 @@
 Trial stuff
 
 
-    PGUSER=postgres \
+    PGUSER=teresalves \
     PGHOST=localhost \
     PGDATABASE=jorgedb \
-    PGPASSWORD=password \
-    PGPORT=5432 \
+    PGPASSWORD=example \
+    PGPORT=3300 \
     yarn dev
