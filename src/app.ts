@@ -20,7 +20,7 @@ client.connect().catch((error: any) => {
 
 
 app.get('/', (req: any, res: any) => {
-  res.send('Hi there \n');
+  res.send('Hello there \n');
 })
 
 app.get('/allbooks', async (req: any, res: any) => {
