@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mapBookResponse test 1`] = `
+Object {
+  "books": Object {
+    "1": Object {
+      "id": "1",
+      "title": "title",
+      "year": 2000,
+    },
+    "2": Object {
+      "id": "2",
+      "title": "title2",
+      "year": 2001,
+    },
+  },
+}
+`;
