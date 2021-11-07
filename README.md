@@ -20,7 +20,7 @@ You can also simply run `yarn dev` but it will not have any connection to the da
 
 # TODO
 
-- [ ] Convert the response from /allbooks to a json response (add unit test & jest)
+- [x] Convert the response from /allbooks to a json response (add unit test & jest)
 - [ ] Add authentication and endpoint with post
 - [ ] Add frontend auth system with react
 - [ ] Add dummy pages to navigate and maintain authentication

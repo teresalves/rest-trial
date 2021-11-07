@@ -1,5 +1,6 @@
 import express from "express";
 import { Client, Pool } from 'pg';
+import { mapBookResponse } from "./mappings/map-book-response";
 const app = express();
 const port = 3000;
 
@@ -25,7 +26,7 @@ app.get('/', (req: any, res: any) => {
 
 app.get('/allbooks', async (req: any, res: any) => {
   const result = await client.query('SELECT * FROM books');
-  res.send(result.rows);
+  res.send(mapBookResponse(result.rows));
 });
 
 
